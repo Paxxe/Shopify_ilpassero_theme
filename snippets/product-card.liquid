@@ -442,8 +442,16 @@
       <div class="sf__pcard-content text-{{ pcard_alignment }} relative">
         <div class="mt-3 lg:mt-5">
           <div class="max-w-full w-full">
-            {%- if show_vendor -%}
-              <span class="sf__pcard-vendor block uppercase text-xs mb-2">{{ product.vendor }}</span>
+            {%- assign approx_size = product.metafields.custom.taglia_approsimativa -%}
+            {%- if show_vendor or approx_size != blank -%}
+              <div class="flex items-center justify-between mb-2">
+                {%- if show_vendor -%}
+                  <span class="sf__pcard-vendor block uppercase text-xs">{{ product.vendor }}</span>
+                {%- endif -%}
+                {%- if approx_size != blank -%}
+                  <span class="sf__pcard-approx-size block uppercase text-xs">{{ approx_size }}</span>
+                {%- endif -%}
+              </div>
             {%- endif -%}
             {% if show_title == true %}
               <h3 class="block text-base">
