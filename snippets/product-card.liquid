@@ -236,22 +236,9 @@
                   {% endif %}
                 {% endfor %}
               {% endif %}
-              {% if show_on_sale_badge %}
-                {%- liquid 
-                  if settings.on_sale_badge == 'show_percentage'
-                    assign sale_class = 'prod__tag-discounted'
-                  else
-                    assign sale_class = 'prod__tag-sale'
-                  endif
-                -%}
-                <span class="py-0.5 px-2 mb-2 mr-2 font-medium rounded-xl text-white prod__tag {{ sale_class }}">
-                  {%- if settings.on_sale_badge == 'show_text' -%}
-                    {{ 'products.product.on_sale' | t }}
-                  {%- endif -%}
-                  {%- if settings.on_sale_badge == 'show_percentage' -%}
-                    {% assign discount = discount | append: '%' %}
-                    {% render 'new-locale', key: 'products.product.discounted_price_html', param: '{{ value }}', value: discount %}
-                  {%- endif -%}
+              {% if show_on_sale_badge and settings.on_sale_badge == 'show_text' %}
+                <span class="py-0.5 px-2 mb-2 mr-2 font-medium rounded-xl text-white prod__tag prod__tag-sale">
+                  {{ 'products.product.on_sale' | t }}
                 </span>
               {% endif %}
             </div>
@@ -472,8 +459,14 @@
             {% endif %}
           </div>
         
-          <div class="sf__pcard-price leading-normal">
+          <div class="sf__pcard-price leading-normal flex items-center flex-wrap gap-2">
             {% render 'product-prices', product: product, is_product_card: true %}
+            {% if show_on_sale_badge and settings.on_sale_badge == 'show_percentage' %}
+              {% assign discount_label = discount | append: '%' %}
+              <span class="py-0.5 px-2 font-medium rounded-xl text-white prod__tag prod__tag-discounted">
+                {% render 'new-locale', key: 'products.product.discounted_price_html', param: '{{ value }}', value: discount_label %}
+              </span>
+            {% endif %}
           </div>
           {% render 'product-card-option', product: product, show_variant_options: show_variant_options %}
 
