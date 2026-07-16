@@ -459,7 +459,7 @@
             {% endif %}
           </div>
         
-          <div class="sf__pcard-price leading-normal flex items-center flex-wrap gap-2">
+          <div class="sf__pcard-price leading-normal flex items-center flex-wrap gap-2 {% if pcard_alignment == 'center' %}justify-center{% elsif pcard_alignment == 'right' %}justify-end{% else %}justify-start{% endif %}">
             {% render 'product-prices', product: product, is_product_card: true %}
             {% if show_on_sale_badge and settings.on_sale_badge == 'show_percentage' %}
               {% assign discount_label = discount | append: '%' %}
