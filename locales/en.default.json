@@ -563,6 +563,13 @@
           "cashback_descriptor": {
             "many": "You'll receive the cashback after %{count} days"
           }
+        },
+        "pending_payment": {
+          "oxxo": {
+            "days_left": {
+              "many": "%{count} days"
+            }
+          }
         }
       },
       "shipping_errors": {
