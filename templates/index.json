@@ -98,6 +98,27 @@
         "custom_class": ""
       }
     },
+    "favorite_product_slider_jmrk9L": {
+      "type": "favorite-product-slider",
+      "name": "Favorite product slider",
+      "settings": {
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "featured_product": "sophia-curvy-26502-maglia-oblo-nero",
+        "heading": "Example product title",
+        "subheading": "",
+        "description": "Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.",
+        "header_alignment": "center",
+        "text_color": "black",
+        "button_label": "Shop now",
+        "button_link": "",
+        "button_style": "sf__btn-secondary",
+        "button_size": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
     "featured_collection_A4GJAa": {
       "type": "featured-collection",
       "disabled": true,
@@ -766,6 +787,7 @@
     "custom_liquid_D6eE3F",
     "slider_zAX6zk",
     "featured_collection_g4C7M3",
+    "favorite_product_slider_jmrk9L",
     "featured_collection_A4GJAa",
     "custom_content_6KqneY",
     "custom_content_CmLnJP",
