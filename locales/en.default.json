@@ -876,6 +876,14 @@
         },
         "location_far_away_other_items": {
           "many": "%{count} locations with items"
+        },
+        "stock_details": {
+          "ship_separately": {
+            "many": "The items will be shipped separately"
+          },
+          "remove_items": {
+            "many": "The items will be removed from the order."
+          }
         }
       },
       "general": {
@@ -953,6 +961,16 @@
         },
         "items_count": {
           "many": "%{count} items"
+        }
+      },
+      "field_errors": {
+        "custom_field": {
+          "cart_metafield_value_too_long_with_limit": {
+            "many": "Enter a maximum of %{count} characters."
+          },
+          "cart_metafield_value_too_short_with_limit": {
+            "many": "Enter at least %{count} characters."
+          }
         }
       }
     },
