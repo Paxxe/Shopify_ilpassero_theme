@@ -1052,7 +1052,12 @@
         "on_its_way_description": "The goods are arriving.",
         "out_for_delivery_description": "The goods are being delivered.",
         "preparing_for_shipping_description": "Items are being prepared for shipment.",
-        "picked_up_description": "These items have been withdrawn."
+        "picked_up_description": "These items have been withdrawn.",
+        "fulfillment_tracking": {
+          "gift_card_sent_to_recipient": {
+            "many": "The gift cards have been sent to the recipients."
+          }
+        }
       },
       "if_not_received": {
         "many": "If they have not been received,",
