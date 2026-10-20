@@ -529,6 +529,9 @@
         },
         "split_shipping_shipment_count_notice_one_time_purchase": {
           "many": "Your order will arrive in %{count} shipments"
+        },
+        "split_shipping_arrives_in_shipments": {
+          "many": "Arrives in %{count} shipments"
         }
       },
       "payment": {
@@ -884,6 +887,12 @@
           "remove_items": {
             "many": "The items will be removed from the order."
           }
+        },
+        "unavailable_item_count": {
+          "many": "%{count} items unavailable"
+        },
+        "ship_separately_notice": {
+          "many": "%{count} items will be shipped separately"
         }
       },
       "general": {
