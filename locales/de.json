@@ -614,6 +614,9 @@
         },
         "split_shipping_shipment_count_notice_one_time_purchase": {
           "many": "Die Bestellung wird in %{count} Teillieferungen versandt"
+        },
+        "split_shipping_arrives_in_shipments": {
+          "many": "Kommt in %{count} Lieferungen an"
         }
       },
       "payment": {
@@ -865,6 +868,20 @@
         },
         "location_far_away_other_items": {
           "many": "%{count} Standorte mit Artikeln"
+        },
+        "stock_details": {
+          "ship_separately": {
+            "many": "Die Artikel werden separat versandt."
+          },
+          "remove_items": {
+            "many": "Die Artikel werden aus der Bestellung entfernt."
+          }
+        },
+        "unavailable_item_count": {
+          "many": "%{count} Artikel nicht verfügbar"
+        },
+        "ship_separately_notice": {
+          "many": "%{count} Artikel werden separat versandt"
         }
       },
       "split_delivery": {
@@ -913,6 +930,16 @@
       "remote_merchandise_only": {
         "detail_item_label": {
           "many": "{{count}} Artikel"
+        }
+      },
+      "field_errors": {
+        "custom_field": {
+          "cart_metafield_value_too_long_with_limit": {
+            "many": "Geben Sie maximal %{count} Zeichen ein."
+          },
+          "cart_metafield_value_too_short_with_limit": {
+            "many": "Geben Sie mindestens %{count} Zeichen ein."
+          }
         }
       }
     },
@@ -968,6 +995,11 @@
         },
         "gift_card_resend_button": {
           "many": "Geschenkgutscheine erneut senden"
+        },
+        "fulfillment_tracking": {
+          "gift_card_sent_to_recipient": {
+            "many": "Die Geschenkgutscheine wurden an die Empfänger versandt."
+          }
         }
       }
     },
