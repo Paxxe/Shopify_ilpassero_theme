@@ -882,6 +882,22 @@
         },
         "ship_separately_notice": {
           "many": "%{count} Artikel werden separat versandt"
+        },
+        "stock_details_modal": {
+          "can_ship_description": {
+            "many": "Diese Artikel sind an der ausgewählten Abholstelle nicht mehr verfügbar."
+          },
+          "cannot_ship_description": {
+            "many": "Diese Artikel sind in der ausgewählten Abholstation vergriffen und können nicht versandt werden."
+          }
+        },
+        "stock_details_banner": {
+          "heading": {
+            "many": "%{count} Artikel sind für die Abholung bei %{location} nicht verfügbar"
+          },
+          "ship_separately": {
+            "many": "Versende sie separat."
+          }
         }
       },
       "split_delivery": {
