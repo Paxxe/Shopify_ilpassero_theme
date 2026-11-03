@@ -889,6 +889,9 @@
           },
           "cannot_ship_description": {
             "many": "Diese Artikel sind in der ausgewählten Abholstation vergriffen und können nicht versandt werden."
+          },
+          "cannot_ship_bundle_description": {
+            "many": "Diese Artikel sind am ausgewählten Abholort ausverkauft und können nicht versandt werden. Auch die Artikel des Pakets werden entfernt."
           }
         },
         "stock_details_banner": {
@@ -1023,6 +1026,9 @@
       "image_gallery": {
         "load_more_items": {
           "many": "Weitere {{count}} Artikel anzeigen"
+        },
+        "additional_items": {
+          "many": "+ {{count}} weitere Artikel"
         }
       },
       "subtotal_label_with_quantity": {
@@ -1030,6 +1036,11 @@
       },
       "discount_order_stacking": {
         "many": "Bestellrabatte"
+      },
+      "edit_summary": {
+        "updated_count": {
+          "many": "Die Bestellung wurde {{count}} Mal aktualisiert"
+        }
       }
     },
     "B2B": {
@@ -1093,6 +1104,31 @@
       "humanize": {
         "lessThanOneHourAgo": {
           "many": "{{count}} Minuten zuvor"
+        }
+      }
+    },
+    "returns_and_cancellations": {
+      "request_withdrawal_page": {
+        "review_changes_modal": {
+          "items_to_cancel": {
+            "many": "{{count}} Artikel zum Stornieren"
+          },
+          "items_to_return": {
+            "many": "{{count}} Artikel zurücksenden"
+          }
+        },
+        "line_items": {
+          "ineligible_items": {
+            "many": "{{count}} Artikel nicht geeignet"
+          }
+        }
+      },
+      "estimated_refund_summary_card": {
+        "subtotal_with_count": {
+          "many": "Zwischensumme · {{count}} Artikel"
+        },
+        "item_selected": {
+          "many": "{{count}} Artikel"
         }
       }
     }
