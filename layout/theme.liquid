@@ -62,7 +62,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {{ content_for_header }} 
   </head>
 
-  {% if customer %}
 
 {% if customer and customer.email %}
   <script>
@@ -97,7 +96,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
 {% endif %}
 
-{% endif %}
 
   <body
     id="sf-theme"
