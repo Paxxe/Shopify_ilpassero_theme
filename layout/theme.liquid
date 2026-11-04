@@ -64,17 +64,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   {% if customer %}
 
-<script>
+{% if customer and customer.email %}
+  <script>
+    (() => {
+      const email = {{ customer.email | json }};
 
-  console.log('SHOPIFY CUSTOMER DEBUG:', {
+      async function identifyKlaviyoCustomer() {
+        // Rispetta il consenso marketing
+        if (!window.Shopify?.customerPrivacy?.marketingAllowed?.()) {
+          return;
+        }
 
-    loggedIn: {% if customer %}true{% else %}false{% endif %},
+        try {
+          if (typeof window.klaviyo?.identify === 'function') {
+            await window.klaviyo.identify({
+              email: email
+            });
 
-    email: {{ customer.email | json }}
+            console.log('[Klaviyo] Customer identified');
+          }
+        } catch (error) {
+          console.error('[Klaviyo] Identify error:', error);
+        }
+      }
 
-  });
-
-</script>
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', identifyKlaviyoCustomer);
+      } else {
+        identifyKlaviyoCustomer();
+      }
+    })();
+  </script>
+{% endif %}
 
 {% endif %}
 
