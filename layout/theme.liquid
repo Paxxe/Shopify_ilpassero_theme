@@ -39,6 +39,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-W5GX64V');</script>
 <!-- End Google Tag Manager -->
     
+
+
+{% if customer %}
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', async () => {
+
+      if (!window.Shopify?.customerPrivacy?.analyticsProcessingAllowed?.()) {
+
+        return;
+
+      }
+
+      const email = {{ customer.email | json }};
+
+      if (email && window.klaviyo?.identify) {
+
+        await window.klaviyo.identify({
+
+          email: email
+
+        });
+
+        console.log('Cliente identificato in Klaviyo');
+
+      }
+
+    });
+
+  </script>
+
+{% endif %}
+
+
     {%- liquid
       render 'preload'
       render 'SEO'
