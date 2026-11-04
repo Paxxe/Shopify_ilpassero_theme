@@ -64,33 +64,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   {% if customer %}
 
-  <script>
+<script>
 
-    document.addEventListener('DOMContentLoaded', async () => {
+  console.log('SHOPIFY CUSTOMER DEBUG:', {
 
-      if (!window.Shopify?.customerPrivacy?.analyticsProcessingAllowed?.()) {
+    loggedIn: {% if customer %}true{% else %}false{% endif %},
 
-        return;
+    email: {{ customer.email | json }}
 
-      }
+  });
 
-      const email = {{ customer.email | json }};
-
-      if (email && window.klaviyo?.identify) {
-
-        await window.klaviyo.identify({
-
-          email: email
-
-        });
-
-        console.log('Cliente identificato in Klaviyo');
-
-      }
-
-    });
-
-  </script>
+</script>
 
 {% endif %}
 
