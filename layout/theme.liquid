@@ -38,10 +38,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-W5GX64V');</script>
 <!-- End Google Tag Manager -->
-    
 
+    {%- liquid
+      render 'preload'
+      render 'SEO'
+      render 'social-meta-tags'
+      render 'font-face'
+    -%}
 
-{% if customer %}
+    {% render 'critical-css' %}
+    {% render 'critical-scripts' %}
+    {% render 'custom-code-head' %}
+
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+    {{ 'chunk.css' | asset_url | stylesheet_tag }}
+
+    {% render 'style-tags' %}
+
+    <script src="{{ 'vendor.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'theme-global.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'app.min.js' | asset_url }}" defer="defer"></script>
+
+    {{ content_for_header }} 
+  </head>
+
+  {% if customer %}
 
   <script>
 
@@ -72,30 +93,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
 
 {% endif %}
-
-
-    {%- liquid
-      render 'preload'
-      render 'SEO'
-      render 'social-meta-tags'
-      render 'font-face'
-    -%}
-
-    {% render 'critical-css' %}
-    {% render 'critical-scripts' %}
-    {% render 'custom-code-head' %}
-
-    {{ 'theme.css' | asset_url | stylesheet_tag }}
-    {{ 'chunk.css' | asset_url | stylesheet_tag }}
-
-    {% render 'style-tags' %}
-
-    <script src="{{ 'vendor.min.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'theme-global.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'app.min.js' | asset_url }}" defer="defer"></script>
-
-    {{ content_for_header }} 
-  </head>
 
   <body
     id="sf-theme"
