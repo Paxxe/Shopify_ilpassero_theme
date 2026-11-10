@@ -1099,7 +1099,23 @@
       "didnt_pick_up_order": "Didn't pick up your order?",
       "let_us_know": "Let us know",
       "contact_us": "contact us.",
-      "if_you_didnt_receive_this": "If you have not received anything,"
+      "if_you_didnt_receive_this": "If you have not received anything,",
+      "buy_again_review": {
+        "unavailable_in_market": {
+          "body": {
+            "many": "These products were not added to your cart because they are not available in your country or geographic area."
+          },
+          "none_body": {
+            "many": "These products are not available in your country or region."
+          },
+          "heading": {
+            "many": "Products not available"
+          }
+        },
+        "item_count": {
+          "many": "{{count}} items"
+        }
+      }
     },
     "B2B": {
       "orders": {
