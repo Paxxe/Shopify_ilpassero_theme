@@ -1020,6 +1020,22 @@
             "many": "Die Geschenkgutscheine wurden an die Empfänger versandt."
           }
         }
+      },
+      "buy_again_review": {
+        "unavailable_in_market": {
+          "body": {
+            "many": "Diese Produkte wurden nicht zum Warenkorb hinzugefügt, da sie in deinem Land oder deiner Region nicht verfügbar sind."
+          },
+          "none_body": {
+            "many": "Diese Produkte sind in deinem Land oder deiner geografischen Region nicht verfügbar."
+          },
+          "heading": {
+            "many": "Produkte nicht verfügbar"
+          }
+        },
+        "item_count": {
+          "many": "{{count}} Artikel"
+        }
       }
     },
     "order_details": {
