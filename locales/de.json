@@ -934,6 +934,14 @@
         },
         "items_count": {
           "many": "%{count} Artikel"
+        },
+        "delivery_updated_toast": {
+          "shipping": {
+            "many": "{{count}} Artikel wurden zur Lieferung weitergeleitet."
+          },
+          "removal": {
+            "many": "{{count}} Artikel wurden entfernt."
+          }
         }
       },
       "merchandise_unavailable_in_buyer_location": {
